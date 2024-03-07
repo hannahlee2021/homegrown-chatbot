@@ -21,11 +21,18 @@ h2 {
     padding-left: 30px;
 }
 
+/* p {
+    font-family: "IBM Plex Mono", sans-serif;
+    font-size: 11px;
+    color: white;
+    text-align:center;
+} */
 p {
     font-family: "IBM Plex Mono", sans-serif;
     font-size: 11px;
     color: white;
     text-align:center;
+    margin-left: -182px;
 }
 
 .title-container {
@@ -97,7 +104,9 @@ button {
     justify-content: flex-end;
     align-items: center;
     /* padding-right: 100px; */
-    margin-right: 220px;
+    /* margin-right: 220px;
+    margin-top: -400px; */
+    margin-right: -18px;
     margin-top: -400px;
  
  }
