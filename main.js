@@ -9,7 +9,7 @@ document.getElementById('chatbot').addEventListener('submit', function(event) {
     event.preventDefault();
 
 
-const inputTextValue = document.getElementById('input-text').value;
+const inputTextValue = document.getElementById('input-text').value.toLowerCase();
 const QA = {
     one: {
     question: "what color is the sky on a sunny afternoon",
@@ -26,21 +26,31 @@ const QA = {
 };
 
 const foundMatch = false;
+document.getElementById('output').innerHTML = "";
 
 for(const key in QA) {
     if ((inputTextValue.match("sky") && key==="one")
-    || (inputTextValue.match("days") && key ==="two") || (inputTextValue.match("difference") && key === "three")) {
-        document.getElementById('submission').innerHTML = QA[key].answer;
+    || (inputTextValue.match("days") && key ==="two") 
+    || (inputTextValue.match("difference") && key === "three")) {
+        document.getElementById('output').innerHTML += `<h2>${QA[key].answer}</h2>`;
         // document.querySelector('.submission-container').innerHTML = QA[key].answer;
         console.log(QA[key].answer)
         foundMatch = true;
-        break;
+        document.getElementById('input-text').innerHTML.value = "";
+        return;
     }
 }
 
 if (!foundMatch) {
     // document.getElementById('submission').innerHTML = "i cannot answer that";
-     document.getElementById('submission').innerHTML += "<p>i cannot answer that<p>";
+     document.getElementById('output').innerHTML += "<p>i cannot answer that<p>";
     console.log("i cant ")
+    document.getElementById('input-text').value = "";
+    
+    
+    
+
+
 }
+
 });
