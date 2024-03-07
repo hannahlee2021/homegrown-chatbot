@@ -38,6 +38,7 @@ p {
 .title-container {
     display: flex;
     justify-content: flex-start;
+    padding-left: 20px;
 }
 
 #title {
