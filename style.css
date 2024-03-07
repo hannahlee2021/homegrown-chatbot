@@ -103,7 +103,8 @@ button {
  }
  
  #submission-circle {
-    width: 70%;
+    /* width: 70%; */
+    width: 800px;
     margin-right: -196px;
     margin-top: -207px;
     /* display: flex;
